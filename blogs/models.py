@@ -6,6 +6,7 @@ class SignUp(models.Model):
     full_name = models.CharField(max_length=15,blank=True,null=True)
     timestamp = models.DateTimeField(auto_now_add=True,auto_now=False)
     updated = models.DateTimeField(auto_now_add=True,auto_now=False)
-
+    # the list of shown into Signup admin Page 
     def __unicode__(self):
-        return self
+        return self.email
+        
